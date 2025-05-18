@@ -16,7 +16,7 @@ const io = new Server(server, {
 io.on('connection', async (socket) => {
   console.log('Usuario conectado')
 
-  // Envía los últimos 20 mensajes al conectar
+  // Envía los ultimos 20 mensajes al conectar
   const lastMessages = await Message.find().sort({ timestamp: 1 }).limit(20)
   lastMessages.forEach(msg => {
     socket.emit('chat message', {

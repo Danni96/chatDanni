@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename)
 
 const app = express()
 
-// Servir archivos estáticos
+// Servir archivos estaticos
 app.use(express.static(path.join(__dirname, 'public')))
 
 // Middleware

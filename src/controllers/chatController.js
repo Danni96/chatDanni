@@ -12,7 +12,7 @@ class ChatController {
 
   async sendMessage(req, res) {
     const { content } = req.body;
-    const username = req.user.username; // Asumiendo que el middleware de autenticación añade el usuario a la solicitud
+    const username = req.user.username;
 
     try {
       const message = new Message({
