@@ -1,6 +1,7 @@
 # Microservicio de Chat
 
 Este proyecto es un microservicio de chat en grupo construido con Express.js y Socket.IO, que permite la comunicación en tiempo real entre los usuarios. Utiliza MongoDB para la persistencia de datos y JWT para la autenticación de usuarios.
+Hecho por Dannis Sánchez
 
 ## Estructura del Proyecto
 
@@ -17,6 +18,8 @@ microservicio-chat
 │   │   └── auth.js           # Middleware de autenticación JWT
 │   ├── models
 │   │   └── Message.js        # Modelo de datos para los mensajes
+│   ├── public
+│   │   └── index.html        # Vista de para manejar el chat
 │   ├── routes
 │   │   └── auth.js           # Rutas de autenticación
 │   └── utils
@@ -57,7 +60,7 @@ microservicio-chat
 
 ## Contribuciones
 
-Las contribuciones son bienvenidas. Si deseas contribuir, por favor abre un issue o envía un pull request.
+Las contribuciones son bienvenidas :D
 
 ## Licencia
 
