@@ -7,7 +7,7 @@
     <style>
       body {
         font-family: "Segoe UI", Arial, sans-serif;
-        background: linear-gradient(135deg, #0a817b 0%, #1c8663 100%);
+        background: linear-gradient(135deg, #262626 0%, #1c4186 100%);
         min-height: 100vh;
         margin: 0;
         display: flex;
@@ -89,7 +89,7 @@
         word-break: break-word;
       }
       #messages li strong {
-        color: #0a817b;
+        /* El color del usuario se asigna dinámicamente por JS */
       }
       #form {
         display: flex;
@@ -209,10 +209,21 @@
       const usernameInput = document.getElementById("username");
       const passwordInput = document.getElementById("password");
 
+      // Genera un color pastel único por usuario
+      function getUserColor(username) {
+        let hash = 0;
+        for (let i = 0; i < username.length; i++) {
+          hash = username.charCodeAt(i) + ((hash << 5) - hash);
+        }
+        const hue = Math.abs(hash) % 360;
+        return `hsl(${hue}, 70%, 50%)`;
+      }
+
       // Mostrar mensajes en el chat
       function addMessage(msg, user) {
         const li = document.createElement("li");
-        li.innerHTML = `<strong>${user}:</strong> ${msg}`;
+        const color = getUserColor(user);
+        li.innerHTML = `<strong style="color:${color}">${user}:</strong> ${msg}`;
         messages.appendChild(li);
         messages.scrollTop = messages.scrollHeight;
       }
