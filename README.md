@@ -44,7 +44,7 @@ microservicio-chat
 
 3. Configura las variables de entorno en el archivo `.env`:
    ```
-   MONGODB_URI=<TU_URI_DE_MONGODB>
+   MONGO_URI=<TU_URI_DE_MONGODB>
    JWT_SECRET=<TU_CLAVE_SECRETA>
    PORT=<PUERTO_DE_TU_ELECCIÓN>
    ```
