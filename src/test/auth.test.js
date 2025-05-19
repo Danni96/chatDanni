@@ -1,8 +1,8 @@
-import * as chai from 'chai';
+import chai, { expect } from 'chai';
 import chaiHttp from 'chai-http';
 import app from '../app.js';
 
-const expect = chai.expect;
+
 chai.use(chaiHttp);
 
 describe('Auth API', () => {
